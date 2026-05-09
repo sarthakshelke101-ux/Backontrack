@@ -1,19 +1,7 @@
 "use client";
-import { useState } from "react";
 import Link from "next/link";
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setEmail("");
-    }
-  };
-
   return (
     <footer className="border-t border-border bg-surface" id="site-footer">
       <div className="max-w-[1000px] mx-auto px-6 py-16">
@@ -68,34 +56,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <h4 className="font-heading font-semibold text-sm mb-4 uppercase tracking-wider">Stay Updated</h4>
-            {subscribed ? (
-              <p className="text-sm text-foreground font-medium">✓ You&apos;re subscribed. Check your inbox!</p>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-3">
-                <p className="text-sm text-muted">Get weekly posture tips and exercises.</p>
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your email"
-                  className="w-full px-3 py-2.5 text-sm border border-border rounded-sm bg-white focus:outline-none focus:border-foreground transition-colors"
-                  required
-                  id="footer-email"
-                />
-                <button
-                  type="submit"
-                  className="w-full bg-foreground text-white text-sm font-medium py-2.5 rounded-sm hover:bg-accent transition-colors"
-                  id="footer-subscribe"
-                >
-                  Subscribe
-                </button>
-              </form>
-            )}
           </div>
         </div>
 
