@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { conditions, categories } from "@/data/conditions";
 import ConditionCard from "@/components/ConditionCard";
 import BodyMap from "@/components/BodyMap";
-import EmailCapture from "@/components/EmailCapture";
 
 export const metadata: Metadata = {
   title: "Start Here — Find Your Posture Issue",
@@ -59,20 +58,6 @@ export default function StartHerePage() {
         </div>
       </section>
 
-      {/* ── Not Sure CTA ── */}
-      <section className="py-16 px-6 bg-surface" id="not-sure">
-        <div className="max-w-[600px] mx-auto text-center">
-          <h2 className="font-heading font-semibold text-xl mb-3">Not sure where to start?</h2>
-          <p className="text-sm text-muted mb-6">
-            Most postural problems are interconnected. Our free 7-day program addresses the most common issues simultaneously.
-          </p>
-          <EmailCapture
-            title="Get Your Free Posture Assessment"
-            subtitle="Receive a personalized starting point based on your symptoms."
-            buttonText="Get Started Free"
-          />
-        </div>
-      </section>
     </>
   );
 }
