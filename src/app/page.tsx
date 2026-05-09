@@ -2,7 +2,7 @@ import Link from "next/link";
 import { conditions } from "@/data/conditions";
 import { generalFaqs } from "@/data/faqs";
 import ConditionCard from "@/components/ConditionCard";
-import EmailCapture from "@/components/EmailCapture";
+
 import FAQSection from "@/components/FAQSection";
 
 export default function HomePage() {
@@ -32,13 +32,7 @@ export default function HomePage() {
             >
               Start Here →
             </Link>
-            <Link
-              href="/free-program"
-              className="border border-foreground text-foreground font-medium px-8 py-3.5 rounded-sm hover:bg-foreground hover:text-white transition-colors text-sm"
-              id="hero-cta-program"
-            >
-              Free Program
-            </Link>
+
           </div>
         </div>
       </section>
@@ -98,8 +92,7 @@ export default function HomePage() {
 
 
 
-      {/* ── Email Capture ── */}
-      <EmailCapture variant="banner" />
+
 
       {/* ── FAQ ── */}
       <section className="px-6">

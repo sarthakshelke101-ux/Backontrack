@@ -63,13 +63,7 @@ export default function Header() {
               )}
             </Link>
           ))}
-          <Link
-            href="/free-program"
-            id="cta-header"
-            className="bg-foreground text-white text-sm font-medium px-5 py-2 rounded-sm hover:bg-accent transition-colors duration-200"
-          >
-            Free Program
-          </Link>
+
         </nav>
 
         {/* Mobile Toggle */}
@@ -114,12 +108,7 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/free-program"
-              className="bg-foreground text-white text-center font-medium px-5 py-3 rounded-sm mt-2"
-            >
-              Free Posture Program
-            </Link>
+
           </nav>
         </div>
       )}
